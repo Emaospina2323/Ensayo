@@ -1,0 +1,221 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	/Propiedad para que un elemento se ajuste con suavidad/
+	scroll-behavior:auto;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;	
+	background:snow;
+}
+
+/* * ============================== */
+/* * ============ HEADER ========== */
+/* * ============================== */
+
+.navbar {
+	background:orange;
+	/* Jairo: Fijar primer parametro para lograr pegar el menú*/
+	/position: sticky;/
+	/* Posicionar el menú por encima del view port al  moverse, no se mueve el menú*/
+	/top:0px;/
+
+}
+
+.navbar a {
+	color: #fff;
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	transition: .5s ease-out all; /lo que demora sombrear el menú cada que selecciono una opción/ 
+}
+
+.navbar a:hover {
+	/Color del menú al poner la mano/
+	background: #1d333d;
+	color: #fff;
+	/Jairo: establecer el formato de texto a subrayado/
+	text-decoration: none;
+}
+
+.contenedor {
+	max-width: 1000px;/* Jairo: la parte que ocupa el menú*/
+	width: 90%;
+	margin: auto;
+	display: flex; /Jairo: tipo de caja que enecesitamos para agrupar los elementos/
+	justify-content: space-between;
+}
+
+/* * ============================== */
+/* * ===== CONTENEDOR IMAGEN ====== */
+/* * ============================== */
+
+.contenedor-imagen {
+	height: 100vh; /* Jairo:Vh hace referencia a que ocupe la centésima parte de la altura del viewport y vw a la centésima parte del ancho del viewport.*/
+}
+
+.contenedor-imagen img {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	object-fit: cover; /* Jairo: La propiedad CSS object-fit indica cómo el contenido de un elemento reemplazado, por ejemplo un <img> o <video>, debería redimensionarse para ajustarse a su contenedor.*/
+	object-position: 0 bottom;
+}
+
+/* * ============================== */
+/* * ============ MAIN ============ */
+/* * ============================== */
+/VAMOS AQUI/
+main {
+	min-height: 100vh;
+}
+
+main .contenido p {
+	margin-bottom: 20px;
+	line-height: 30px;
+	color: #525151;
+}
+
+main .contenido .titulo {
+    font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	padding-top: 40px;
+}
+
+main .contenido .fecha {
+	font-size: 14px;
+	color: #B5B5B5;
+}
+
+/* * ============================== */
+/* * ============ ASIDE =========== */
+/* * ============================== */
+
+aside {
+	min-width: 30%;
+	margin: 40px 20px 20px 0;
+	height: 100%;
+	background: #1D2F3D;
+	padding: 20px;
+	border-radius: 3px;
+	/* Jairo: Con estos dos parámetros fijamos el aside(con sus temas) mientras el contenido se desplaza*/
+	/*position: sticky;
+	top:0px;*/
+}
+
+aside .titulo {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #f2f2f2;
+}
+
+aside .indice a {
+	display: block;
+	margin-bottom: 10px;
+	color: #FFCD48;
+}
+
+/* * ============================== */
+/* * ========== FOOTER ============ */
+/* * ============================== */
+footer .navbar{
+/* Fija el menú de abajo temporalmente, mientras la imagen se desplaza */
+	/*position: sticky;
+	bottom: 0px;*/
+}
+
+
+/* * ============================== */
+/* * ====== MEDIA QUERIES ========= */
+/* * ============================== */
+/* Las media queries ("consultas de medios") son útiles cuando deseas modificar tu página web o aplicación en función del tipo de dispositivo (como una impresora o una pantalla) o de características y parámetros específicos (como la resolución de la pantalla o el ancho del viewport del navegador) */
+@media screen and (max-width: 900px){
+	.navbar .contenedor {
+		flex-wrap: wrap; /*La propiedad flex-wrap de CSS especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. */
+		margin: 0;
+		width: 100%;
+	}
+
+	.navbar a {
+		width: auto;
+		flex: 10; /* Jairo: indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. Los elementos flexibles pueden ser estirados para utilizar el espacio disponible  */
+	}
+
+	.contenedor-imagen {
+		height: 100vh;
+	}
+
+	main .contenedor {
+		flex-direction:  inherit; /* La propiedad CSS flex-direction especifica cómo colocar los objetos flexibles en el contenedor flexible definiendo el eje principal y la dirección (normal o al revés).*/
+	}
+}
+
+img{
+  width: 300px;
+  height: 200px;
+}
+
+.section{
+    text-align: center;
+}
+
+.container_video{
+    width: 100%;
+    height: 340px;
+    background:snow;
+}
+
+.container_video .card{
+    display: flex;
+    flex-direction: row;
+    padding: 0%;
+    margin: 0 auto;
+    position: relative;
+    top: 5px;
+    width: 850px;
+    height: 322px;
+    border-radius: 0%;
+    border: 2px white;
+    background: orange;
+}
+
+.container_video .card .video{
+    height: 317px;
+    width: 540px;
+}
+.container_video .card .content{
+    background: orange;
+    color: black;
+    width: 310px;
+    height: 317px;
+    text-align: center;
+    padding: 25px 25px;
+}
+
+footer{
+    background-color:orange;
+}
+
+
+
+
+    
+
