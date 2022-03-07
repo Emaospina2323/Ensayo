@@ -194,7 +194,7 @@ img{
     height: 322px;
     border-radius: 0%;
     border: 2px white;
-    background: orange;
+    background: aqua;
 }
 
 .container_video .card .video{
@@ -211,11 +211,11 @@ img{
 }
 
 footer{
-    background-color:orange;
+    background-color:aqua;
 }
 
 footer{
-	background-attachment: fixed;
+	background-color: aqua;
 }
 
 
